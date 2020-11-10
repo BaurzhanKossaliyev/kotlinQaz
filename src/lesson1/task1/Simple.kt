@@ -4,25 +4,39 @@ package lesson1.task1
 
 import kotlin.math.sqrt
 
+
+
 /**
 Бүтін санның квадратын табу
  */
-fun sqr(x: Int): Double = TODO()
+fun sqr(number: Int): Long {
+    val result = number.toLong() * number
+    return result
+
+}
 
 /**
 Бүтін емес санның квадратын табу
  */
-fun sqr(x: Double): Double = TODO()
+fun sqr(x: Double): Double {
+    return x * x
+}
 
 /**
 Дискриминант шығару
  */
-fun discriminant(a: Double, b: Double, c: Double): Double = TODO()
+fun discriminant(a: Double, b: Double, c: Double): Double {
+    return sqr(b) - 4 * a * c
+}
 
 /**
 Квадраттық теңдеудің бір жауабын табу
  */
-fun quadraticEquationRoot(a: Double, b: Double, c: Double): Double = TODO()
+fun quadraticEquationRoot(a: Double, b: Double, c: Double): Double {
+    val discr = discriminant(a, b, c)
+    val tubirasty = sqrt(discr)
+    return (-1 * b - tubirasty) / 2 * a
+}
 
 /**
 Квадраттық теңдеудің екі жауабының көбейтіндісін табу
@@ -34,9 +48,14 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
 /**
 Негізгі функция
  */
-fun main() {
 
+fun main() {
+    val hours = 8
+    val minutes = 20
+    val second = 35
+    println("Жауабы тең: ${seconds(hours, minutes, second)}")
 }
+
 
 /**
  * Оңай
@@ -45,7 +64,9 @@ fun main() {
  * Қанша секунд екенін шығару(мына мысалда 30035).
  */
 fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
-    TODO()
+    val secondsinhour = hours * 3600
+    val secondsinminutes = minutes * 60
+    return secondsinhour + secondsinminutes + seconds
 }
 
 
@@ -73,7 +94,9 @@ fun trackLength(x1: Double, y1: Double, x2: Double, y2: Double): Double = TODO()
  * Инпут 100-ден үлкен кез-келген сан (мысалы, 3801).
  * Соңынан санағанда үшінші санды табу (мына мысалда 8).
  */
-fun thirdDigit(number: Int): Int = TODO()
+fun thirdDigit(number: Int): Int {
+    TODO()
+}
 
 /**
  * Орташа
